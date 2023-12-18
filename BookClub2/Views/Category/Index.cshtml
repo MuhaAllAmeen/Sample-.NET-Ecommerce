@@ -5,7 +5,7 @@
 
 <h1>Category Index</h1>
 <div>
-    <a asp-controller="Category" asp-action="AddCategory">
+    <a asp-controller="Category" asp-action="CreateCategory">
     <button class="btn btn-primary"><i class="bi bi-plus-square"></i> &nbsp Create new Category
         </button>
     </a>
@@ -24,6 +24,9 @@
                 <tr>
                     <td>@obj.Id</td>
                     <td>@obj.Name</td>
+                    <td><a asp-controller="Category" asp-action="EditCategory" asp-route-id="@obj.Id">Edit</a></td>
+                    <td><a asp-controller="Category" asp-action="DeleteCategory" asp-route-id="@obj.Id">Delete</a></td>
+
                 </tr>
 
             }
